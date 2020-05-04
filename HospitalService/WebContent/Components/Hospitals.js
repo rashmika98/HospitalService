@@ -50,7 +50,7 @@ $(document).on("click", "#btnSave", function(event) {
 		data : $("#formHospital").serialize(),
 		dataType : "text",
 		complete : function(response, status) {
-			onItemSaveComplete(response.responseText, status);
+			onHospitalSaveComplete(response.responseText, status);
 			/*alert(response.responseText);*/
 		}
 	});
@@ -58,7 +58,7 @@ $(document).on("click", "#btnSave", function(event) {
 
 });
 
-function onItemSaveComplete(response, status) {
+function onHospitalSaveComplete(response, status) {
 	
 	
 	if (status == "success") {
@@ -135,13 +135,13 @@ $(document).on("click", ".btnRemove", function(event) {
 		data : "HRegID=" + $(this).data("hospitalid"),
 		dataType : "text",
 		complete : function(response, status) {
-			onItemDeleteComplete(response.responseText, status);
+			onHospitalDeleteComplete(response.responseText, status);
 			/*alert(response);*/
 		}
 	});
 });
 
-function onItemDeleteComplete(response, status) {
+function onHospitalDeleteComplete(response, status) {
 	if (status == "success") {
 		var resultSet = JSON.parse(response);
 		if (resultSet.status.trim() == "success") {
