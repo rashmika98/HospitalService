@@ -19,7 +19,7 @@ public class Hospital {
 		Connection con = null;
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3307/test", "root", "root");
+			con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3307/hospital", "root", "root");
 			System.out.print("Successfully connected");
 		} catch (Exception e) {
 			e.printStackTrace();
