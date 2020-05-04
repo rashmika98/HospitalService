@@ -1,3 +1,4 @@
+<%@page import="com.Hospital"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -11,6 +12,8 @@
 
 <link rel="stylesheet" href="Views/bootstrap.min.css">
 <link rel="stylesheet" href="Views/style.css">
+<script src="Components/jquery-3.2.1.min.js"></script>
+<script src="Components/Hospitals.js"></script>
 
 
 </head>
@@ -91,6 +94,27 @@
 			</div>
 		</div>
 	</div>
+
+
+
+	<br>
+	<br>
+	<div class="gridForm">
+		<div id="alertSuccess" class="alert alert-success"></div>
+		<div id="alertError" class="alert alert-danger"></div>
+
+		<br>
+		<div id="divItemsGrid">
+			<%
+				Hospital hospitalObj = new Hospital();
+			out.print(hospitalObj.readHospitals());
+			%>
+		</div>
+
+	</div>
+
+
+
 
 </body>
 </html>
