@@ -76,7 +76,7 @@ public class Hospital {
 				return "Error while connecting to the database for reading.";
 			}
 			// Prepare the html table to be displayed
-			output = "<table border='1' class='table table-striped table-dark'><tr class ='big-success'><th>HospitalRegID</th> <th>Hospital Name</th><th>Hospital Address</th>"
+			output = "<table border='1' class='table table-striped table-dark'><tr class='bg-success'><th>HospitalRegID</th> <th>Hospital Name</th><th>Hospital Address</th>"
 					+ "<th>Hospital City</th><th>Hospital District</th> <th>Hospital Province</th><th>Hospital Email</th>"
 					+ "<th>Lab Contact Number</th> <th>Lab Username</th><th>Lab Password</th>"
 					+ "<th>Update</th><th>Remove</th></tr>";
@@ -111,7 +111,7 @@ public class Hospital {
 				output += "<td>" + HPassword + "</td>";
 
 				// buttons
-				output += "<td><input name='btnUpdate' type='button' value='Update' class='btnUpdate btn btn-secondary'></td>"
+				output += "<td><input name='btnUpdate' type='button' value='Update' class='btnUpdate btn btn-info'></td>"
 						+ "<td><input name='btnRemove' type='button' value='Remove' class='btnRemove btn btn-danger' data-hospitalid='"
 						+ HRegID + "'>" + "</td></tr>";
 			}
