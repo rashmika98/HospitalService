@@ -42,7 +42,7 @@ $(document).on("click", "#btnSave", function(event) {
 	}
 
 	// If valid------------------------
-	var type = ($("#hidItemIDSave").val() == "") ? "POST" : "PUT";
+	var type = ($("#hidHospitalIDSave").val() == "") ? "POST" : "PUT";
 
 	$.ajax({
 		url : "HospitalsAPI",
@@ -66,7 +66,7 @@ function onHospitalSaveComplete(response, status) {
 		if (resultSet.status.trim() == "success") {
 			$("#alertSuccess").text("Successfully saved.");
 			$("#alertSuccess").show();
-			$("#divItemsGrid").html(resultSet.data);
+			$("#divHospitalsGrid").html(resultSet.data);
 		} else if (resultSet.status.trim() == "error") {
 			$("#alertError").text(resultSet.data);
 			$("#alertError").show();
@@ -78,7 +78,7 @@ function onHospitalSaveComplete(response, status) {
 		$("#alertError").text("Unknown error while saving..");
 		$("#alertError").show();
 	}
-	$("#hidItemIDSave").val("");
+	$("#hidHospitalIDSave").val("");
 	$("#formHospital")[0].reset();
 
 }
@@ -86,7 +86,7 @@ function onHospitalSaveComplete(response, status) {
 //UPDATE==========================================
 $(document).on(	"click",".btnUpdate",function(event) {
 
-			$("#hidItemIDSave").val($(this).closest("tr").find('#hidItemIDUpdate').val());
+			$("#hidHospitalIDSave").val($(this).closest("tr").find('#hidHospitalIDUpdate').val());
 			$("#HRegID").val($(this).closest("tr").find('td:eq(0)').text());
 			$("#HName").val($(this).closest("tr").find('td:eq(1)').text());
 			$("#HAddress").val($(this).closest("tr").find('td:eq(2)').text());
@@ -147,7 +147,7 @@ function onHospitalDeleteComplete(response, status) {
 		if (resultSet.status.trim() == "success") {
 			$("#alertSuccess").text("Successfully deleted.");
 			$("#alertSuccess").show();
-			$("#divItemsGrid").html(resultSet.data);
+			$("#divHospitalsGrid").html(resultSet.data);
 		} else if (resultSet.status.trim() == "error") {
 			$("#alertError").text(resultSet.data);
 			$("#alertError").show();

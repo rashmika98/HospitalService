@@ -86,7 +86,7 @@
 
 						<br> <input id="btnSave" name="btnSave" type="button"
 							value="Save" class="btn btn-outline-info"> <input
-							type="hidden" id="hidItemIDSave" name="hidItemIDSave" value="">
+							type="hidden" id="hidHospitalIDSave" name="hidHospitalIDSave" value="">
 
 
 					</form>
@@ -104,7 +104,7 @@
 		<div id="alertError" class="alert alert-danger"></div>
 
 		<br>
-		<div id="divItemsGrid">
+		<div id="divHospitalsGrid">
 			<%
 				Hospital hospitalObj = new Hospital();
 			out.print(hospitalObj.readHospitals());

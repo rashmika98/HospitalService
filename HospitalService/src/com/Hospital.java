@@ -98,7 +98,7 @@ public class Hospital {
 				String HPassword = rs.getString("HPassword");
 
 				// Add into the HTML table
-				output += "<tr><td><input id='hidItemIDUpdate' name='hidItemIDUpdate' type='hidden' value='" + HRegID
+				output += "<tr><td><input id='hidHospitalIDUpdate' name='hidHospitalIDUpdate' type='hidden' value='" + HRegID
 						+ "'>" + HRegID + "</td>";
 				output += "<td>" + HName + "</td>";
 				output += "<td>" + HAddress + "</td>";
